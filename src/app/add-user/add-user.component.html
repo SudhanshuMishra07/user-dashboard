@@ -1,0 +1,26 @@
+<h2>Add User</h2>
+<form [formGroup]="userForm" (ngSubmit)="addUser()">
+  <input formControlName="name" placeholder="Name" required />
+  <div class="warning" *ngIf="name?.invalid && name?.touched">
+    <small *ngIf="name?.errors?.['required']">*Name is required.</small>
+  </div>
+  <input formControlName="email" placeholder="Email" required type="email" />
+  <div class="warning" *ngIf="email?.invalid && email?.touched">
+    <small *ngIf="email?.errors?.['required']">*Email is required.</small>
+    <small *ngIf="email?.errors?.['email']">*Enter a valid email address.</small>
+  </div>
+  <select formControlName="role" required>
+    <option value="">Select Role</option>
+    <option value="Admin">Admin</option>
+    <option value="Editor">Editor</option>
+    <option value="Viewer">Viewer</option>
+  </select>
+  <div class="warning" *ngIf="role?.invalid && role?.touched">
+    <small>*Role is required.</small>
+  </div>
+  <div class="btn">
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+    <button class="close" (click)="closeForm()">Cancel</button>
+  </div>
+  
+</form>

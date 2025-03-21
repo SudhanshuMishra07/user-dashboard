@@ -1,0 +1,67 @@
+h2 {
+  margin-bottom: 20px;
+  color: #1c4980;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  margin: auto;
+}
+
+input, select {
+  height: 48px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #1c4980;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.close{
+  margin-left: 10px;
+}
+
+.btn{
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  background-color: #1c4980;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2a6bb0;
+}
+
+select {
+  color: #383838;
+}
+
+input[type="email"] {
+  margin-bottom: 10px;
+}
+::ng-deep .mat-mdc-dialog-surface{
+  padding: 10px;
+}
+
+.warning {
+  color: red;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}

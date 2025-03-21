@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+::ng-deep .mat-mdc-table {
+  border-bottom: 1px solid #383838 !important; 
+}
+
+button {
+  background-color: #1c4980;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+::ng-deep .mat-mdc-header-row{
+  background-color: #1c4980 !important;
+  color:white !important
+}
+
+th, td {
+  border: 1px solid #383838;
+}
+
+.chart-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
